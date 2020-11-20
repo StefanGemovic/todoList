@@ -1,6 +1,7 @@
 body {
-    background-color: #333 !important;
+    background-color: #e67e22 !important;
     color: white !important;
+    font-family: 'Philosopher', sans-serif !important;
 }
 
 .naslov, .input-items {
@@ -11,22 +12,56 @@ body {
     font-size: 21px;
 }
 
-
-
-
-
-/* .input-items input {
-    width: 60%;
-    margin-left: 15%;
+.input-items input {
     font-size: 21px;
-    border-radius: 5px;
     padding: 3px;
+    width: 90%;
 }
 .enter {
-    font-size: 22px !important;
-    border-radius: 5px;
-    padding: 2px 15px;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 3px 15px;
+    border: 1px solid  #2d3436;
 }
 .enter:hover {
-    color: #44bd32;
-} */
+    color: #e67e22;
+}
+.oneTask {
+    color: white;
+    list-style-type: none;
+    background-color: #2d3436;
+    font-size: 22px;
+    padding: 10px;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.oneTask:hover {
+    transform: scale(1.1);
+}
+
+.deleteTask, .editTask {
+    position: absolute;
+    cursor: pointer;
+}
+.deleteTask {
+    right: 10px;
+    font-size: 24px;
+}
+.editTask {
+    right: 35px;
+    font-size: 20px;
+}
+
+.clearAllBtn {
+    padding: 5px 20px;
+    border: 1px solid  #2d3436;
+    border-radius: none;
+}
+.clearAllBtn:hover {
+    color: #e67e22;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
