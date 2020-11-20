@@ -1,0 +1,32 @@
+body {
+    background-color: #333 !important;
+    color: white !important;
+}
+
+.naslov, .input-items {
+    padding: 3%;
+}
+.naslov p {
+    padding-top: 2%;
+    font-size: 21px;
+}
+
+
+
+
+
+/* .input-items input {
+    width: 60%;
+    margin-left: 15%;
+    font-size: 21px;
+    border-radius: 5px;
+    padding: 3px;
+}
+.enter {
+    font-size: 22px !important;
+    border-radius: 5px;
+    padding: 2px 15px;
+}
+.enter:hover {
+    color: #44bd32;
+} */
