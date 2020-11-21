@@ -1,22 +1,18 @@
 var tasksList = document.querySelector('.list');
-var tasks = [];
 var clearAll = document.querySelector('.clearAllBtn');
 var input = document.querySelector('#input');
 var enterTask = document.querySelector('.enter');
 
-//enter the tasks
+//enter tasks
 enterTask.addEventListener('click', function(){
-   tasks.push(input.value);
-   displayTask();
+   if (input.value !== "") {
+   var tasks = document.createElement("div");
+   tasks.classList.add("oneTask");
+   tasks.innerHTML += input.value + "<span class='editTask'>" + "&check;" + "</span>" + "<span class='deleteTask'>" + "&times" + "</span>";
+   tasksList.appendChild(tasks);
+   }
    input.value = "";
-});
-
-// display tasks
-function displayTask() {
-   tasksList.innerHTML = "";
-   for (var i = 0; i < tasks.length; i++)
-   tasksList.innerHTML += "<div class='oneTask'>" + tasks[i] + "<span class='editTask'>" + "&check;" + "</span>" + "<span class='deleteTask'>" + "&times" + "</span>" + "</div>";
-}
+})
 
 // mark task complete and delete one task
 tasksList.addEventListener('click', function(e) {
@@ -32,6 +28,5 @@ tasksList.addEventListener('click', function(e) {
 
 //delete all tasks
 clearAll.addEventListener('click', function () {
-   tasks = [];
-   displayTask();
+   tasksList.innerHTML = "";
 })
